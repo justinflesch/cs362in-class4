@@ -1,28 +1,28 @@
 # Calculator program
 
 class calc:
-    def add(num1, num2):
+    def add(self, num1, num2):
         return num1 + num2
 
-    def sub(num1, num2):
+    def sub(self, num1, num2):
         return num1 - num2
 
-    def multi(num1, num2):
+    def multi(self, num1, num2):
         return num1 * num2
 
-    def divi(num, denom):
+    def divi(self, num, denom):
         if denom == 0:
             print("Cannot divide by 0")
         else:
             return num / denom
 
-    def prompter():
+    def __init__(self):
         result = 0
         val = input("Choose an operation, type it's value and hit enter: \na) Addition\nb) Subtraction\nc) Multiplication\nd) Division\n")
         if val == "a":
             num1 = float(input("Enter first addititive: "))
             num2 = float(input("Enter second addititive: "))
-            result = add(num1, num2)
+            result = self.add(num1, num2)
         elif val == "b":
             num1 = float(input("Enter number to be subtracted from: "))
             num2 = float(input("Enter subtractor: "))
@@ -40,4 +40,4 @@ class calc:
         print(result)
 
 if __name__ == "__main__":
-    calculator.prompter()
+    calculator = calc()
